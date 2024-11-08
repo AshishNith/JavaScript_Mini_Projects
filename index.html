@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mini Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #0ff,
+                         0 0 20px #0ff,
+                         0 0 30px #0ff;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: #151515;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+            border-color: rgba(0, 255, 255, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .project-card h2 {
+            color: #0ff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        .project-card p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .features-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "•";
+            color: #0ff;
+            position: absolute;
+            left: 0.5rem;
+            text-shadow: 0 0 5px #0ff;
+        }
+
+        .view-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: #0ff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #0ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .view-btn:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-stack {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            padding: 0.3rem 0.6rem;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #0ff;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Mini Projects</h1>
+        <p class="subtitle">A collection of interactive JavaScript projects demonstrating various web development concepts</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="TodoList/todolist.png" alt="Todo List Preview" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <h2><i class="fas fa-tasks"></i> Modern Todo List</h2>
+                <p>A sleek and responsive todo list application with modern features.</p>
+                <ul class="features-list">
+                    <li>Add, delete, and mark tasks as complete</li>
+                    <li>Filter tasks (All, Pending, Completed)</li>
+                    <li>Clear completed tasks</li>
+                    <li>Local task counter</li>
+                </ul>
+                <a href="TodoList/index.html" class="view-btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="Calculator/calculator.png" alt="Calculator Preview" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <h2><i class="fas fa-calculator"></i> Calculator</h2>
+                <p>A modern calculator application with glass-morphism design.</p>
+                <ul class="features-list">
+                    <li>Basic arithmetic operations</li>
+                    <li>Percentage calculations</li>
+                    <li>Clear and responsive display</li>
+                    <li>Keyboard support</li>
+                </ul>
+                <a href="Calculator/index.html" class="view-btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="BMI_Calculator/bmi.png" alt="BMI Calculator Preview" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <h2><i class="fas fa-weight"></i> BMI Calculator</h2>
+                <p>A simple Body Mass Index calculator with visual feedback.</p>
+                <ul class="features-list">
+                    <li>Calculates BMI from height and weight</li>
+                    <li>Weight category classification</li>
+                    <li>Visual indicators</li>
+                    <li>BMI reference guide</li>
+                </ul>
+                <a href="BMI_Calculator/index.html" class="view-btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="LocalTime/local.png" alt="Local Time Preview" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <h2><i class="fas fa-clock"></i> Local Time Display</h2>
+                <p>A digital clock application with real-time updates.</p>
+                <ul class="features-list">
+                    <li>Real-time updates</li>
+                    <li>Current date display</li>
+                    <li>Clean and modern interface</li>
+                    <li>Responsive design</li>
+                </ul>
+                <a href="LocalTime/index.html" class="view-btn">View Project</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
