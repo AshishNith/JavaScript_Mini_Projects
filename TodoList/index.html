@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>Daily Tasks <i class="fas fa-list-check"></i></h1>
+            
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="Add your task">
+                <button id="add-button" onclick="addTask()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="filters">
+                <div class="filter active" data-filter="all">All</div>
+                <div class="filter" data-filter="pending">Pending</div>
+                <div class="filter" data-filter="completed">Completed</div>
+            </div>
+
+            <ul id="task-list">
+                <li>
+                    <span class="task-text">Complete JavaScript Project</span>
+                    <span class="delete-btn">x</span>
+                </li>
+                <li class="completed">
+                    <span class="task-text">Morning Exercise</span>
+                    <span class="delete-btn">×</span>
+                </li>
+                <li>
+                    <span class="task-text">Read Documentation</span>
+                    <span class="delete-btn">×</span>
+                </li>
+                <li>
+                    <span class="task-text">Team Meeting at 3 PM</span>
+                    <span class="delete-btn">×</span>
+                </li>
+                <li class="completed">
+                    <span class="task-text">Send Project Updates</span>
+                    <span class="delete-btn">×</span>
+                </li>
+            </ul>
+
+            <div class="list-footer">
+                <span id="task-count">5 tasks left</span>
+                <button class="clear-completed" id="clear-completed">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
